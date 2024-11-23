@@ -1,0 +1,24 @@
+Steps to create clean env:
+
+Install MongoDB, create mongodb://localhost:27017/WorldCityUser
+
+mkdir my-new-app
+cd my-new-app
+
+npm init -y
+
+//order of modules below is not vital and they will be present in docker container automatically but require to be present locally.
+1. npm install node
+2. npm install express mongoose next react react-dom axios cors mongodb @mui/material @emotion/react @emotion/styled
+
+How to run:
+docker-compose up --build
+
+Attn!!!
+mongoose.connect('mongodb://localhost:27017/WorldCityUser') -> mongoose.connect('mongodb://mongo:27017/WorldCityUser') in server.js and other files to prevent connection to the container itself. 
+But it will not work in local installation out of container!!!
+
+To run the solution in local environment out of Docker, correct connection to MongoDB to 'mongodb://localhost:27017/WorldCityUser' and run the commands:
+1. run MongoDB 
+2. node server/server.js //from my-new-app !!!
+3. npm run dev           //from my-new-app !!! 
