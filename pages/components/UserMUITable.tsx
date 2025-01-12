@@ -142,7 +142,7 @@ const UserMUITable: React.FC<UserTableProps> = ({ users, onDeleteUser }) => {
   };
 
   return (
-    <Box sx={{ height: 319, width: '100%'}}>
+    <Box sx={{ height: 319, width: '100%', bgcolor: 'rgba(255, 255, 255, 0.7)'}}>
       <DataGrid
         rows={rows}
         columns={columns}
