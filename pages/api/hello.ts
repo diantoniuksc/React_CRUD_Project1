@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// Test API which returns "John Doe" if API call was successful
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
